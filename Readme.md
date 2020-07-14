@@ -77,3 +77,9 @@ npm i redux-founder
 
 - [test]()
 
+
+
+## License
+
+[MIT](<https://github.com/Redux-founder/redux-founder/blob/master/redux-founder/LICENSE>)
+
