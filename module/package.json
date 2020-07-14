@@ -1,8 +1,8 @@
 {
   "name": "redux-founder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Founder for easy use of Redux",
-  "main": "dist/bundle.js",
+  "main": "./dist/bundle.js",
   "scripts": {
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack -d --mode development",
@@ -26,7 +26,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Redux-founder/redux-founder/issues",
+    "url": "https://github.com/Redux-founder/module/issues",
     "email": "monsterjy@gmail.com"
   },
   "contributors": [],
