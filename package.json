@@ -29,6 +29,9 @@
     "url": "https://github.com/Redux-founder/redux-founder/issues",
     "email": "monsterjy@gmail.com"
   },
+  "publishConfig": {
+    "registry": "https://github.com/Redux-founder/redux-founder"
+  },
   "contributors": [],
   "homepage": "https://github.com/Redux-founder/redux-founder#readme",
   "devDependencies": {
