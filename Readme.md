@@ -81,5 +81,5 @@ export default handleActions(
 
 ## License
 
-[MIT](<https://github.com/Redux-founder/redux-founder/blob/master/LICENSE>)
++ [MIT](<https://github.com/Redux-founder/redux-founder/blob/master/LICENSE>)
 
