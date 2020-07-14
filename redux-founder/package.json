@@ -1,6 +1,6 @@
 {
   "name": "redux-founder",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Founder for easy use of Redux",
   "main": "./dist/bundle.js",
   "scripts": {
