@@ -4,9 +4,16 @@ import produce from 'immer';
 export default function SpreadActions(config) {
   const { state: defaultState } = config;
 
-  return function (customState, sagas, config = {}) {
-    const { init, pending, success, failure } = config;
+  return function (customState, types, config = {}) {
+    const { init, pending, success, failure, callback } = config;
+
     try {
+      // single
+      if (customState === null) {
+        this[types] = (state, payload) => produce(state, draft => callback(draft, payload, state));
+        return;
+      }
+
       const setPartial = (fn, draft, payload, state, type) => {
         let targetState = notation(customState, draft);
         const intialState = notation(customState, defaultState);
@@ -28,19 +35,21 @@ export default function SpreadActions(config) {
           fn(draft, payload, state);
         }
       };
-      this[sagas.INIT] = (state, payload) =>
+
+      // types
+      this[types.INIT] = (state, payload) =>
         produce(state, draft => {
           setPartial.apply(this, [init, draft, payload, state, 'init']);
         });
-      this[sagas.PENDING] = (state, payload) =>
+      this[types.PENDING] = (state, payload) =>
         produce(state, draft => {
           setPartial.apply(this, [pending, draft, payload, state, 'pending']);
         });
-      this[sagas.SUCCESS] = (state, payload) =>
+      this[types.SUCCESS] = (state, payload) =>
         produce(state, draft => {
           setPartial.apply(this, [success, draft, payload, state, 'success']);
         });
-      this[sagas.FAILURE] = (state, payload) =>
+      this[types.FAILURE] = (state, payload) =>
         produce(state, draft => {
           setPartial.apply(this, [failure, draft, payload, state, 'failure']);
         });

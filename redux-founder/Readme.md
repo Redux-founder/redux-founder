@@ -8,6 +8,8 @@ It is a module to easily process pending, success, failure, and reset in Redux-s
 
 ## Quick Start
 
+### redux-saga
+
 ```js
 import { makeAsyncActions, makeAsyncCreateActions } from 'redux-founder'
 //axios
@@ -44,6 +46,18 @@ export default handleActions(
   initialState,
 );
 ```
+
+### single action
+
+```js
+...new SpreadReducer(null, actions.INFO_CASE_INIT, {
+  callback: (draft, { payload: diff }, state) => {
+    // after callback
+  },
+}),
+```
+
+
 
 ## Usage
 
