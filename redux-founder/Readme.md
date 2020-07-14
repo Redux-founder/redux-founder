@@ -1,31 +1,30 @@
-\# redux-founder
+# redux-founder
 
-\## Introduction
+## Introduction
 
 [redux-founder](https://github.com/Redux-founder/)
 
-\## Quick Start
+## Quick Start
 
-\```
+```
 
-\```
+```
 
-\## Installing``
-
-Using npm:
-
-Usage
+## Usage
 
 Inside your React project directory, run the following:
 
-yarn add swr
+```
+npm i redux-founder
+```
 
-Or with npm:
+## Installing
 
-npm install swr
 
-API
 
-const { data, error, isValidating, mutate } = useSWR(key, fetcher, options)
 
-Parameters
+
+## Examples
+
+- [test]()
+
