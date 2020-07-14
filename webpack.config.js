@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const config = {
-  entry: path.resolve(__dirname, './lib/index.js'),
+  entry: path.resolve(__dirname, './lib/index.ts'),
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
@@ -10,6 +10,11 @@ const config = {
   },
   module: {
     rules: [
+      {
+        test: /\.ts(x)?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.js$/,
         use: 'babel-loader',
