@@ -1,11 +1,11 @@
+import { notation } from './common';
+import produce from 'immer';
 // NOTE: Redux Saga, Actions
 export default function SpreadActions(config) {
   const { state: defaultState } = config;
 
   return function (customState, sagas, config = {}) {
     const { init, pending, success, failure } = config;
-    const notation = (str, obj) => str.split('.').reduce((a, c) => a[c], obj);
-
     try {
       const setPartial = (fn, draft, payload, state, type) => {
         let targetState = notation(customState, draft);
