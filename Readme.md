@@ -1,14 +1,26 @@
-# redux-founder
+# Redux-founder
 
-## Introduction
+A module that easily handles hold, success, failure and reset in Redux-saga. Or the normal disaptch action also makes it concise.
 
-It is a module to easily process pending, success, failure, and reset in Redux-saga.
+You can use Redux together with [React](https://reactjs.org/), or with any other view library.
 
 [redux-founder](https://github.com/Redux-founder/)
 
+
+
+## Installation
+
+Inside your React project directory, run the following:
+
+```
+npm i redux-founder
+```
+
+
+
 ## Quick Start
 
-### redux-saga
+### redux-saga action type
 
 ```js
 import { makeAsyncActions, makeAsyncCreateActions } from 'redux-founder'
@@ -47,7 +59,7 @@ export default handleActions(
 );
 ```
 
-### single action
+### single dispatch action type
 
 ```js
 ...new SpreadReducer(null, actions.INFO_CASE_INIT, {
@@ -56,18 +68,6 @@ export default handleActions(
   },
 }),
 ```
-
-
-
-## Usage
-
-Inside your React project directory, run the following:
-
-```
-npm i redux-founder
-```
-
-## Installing
 
 
 
